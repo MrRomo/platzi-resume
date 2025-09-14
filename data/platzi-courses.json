@@ -1,0 +1,358 @@
+{
+  "cursos": [
+    {
+      "nombre": "Curso de Configuración de Entorno de Desarrollo en macOS",
+      "fecha": "2024-10-09",
+      "categoria": "Sistemas/DevOps"
+    },
+    {
+      "nombre": "Curso de Configuración de Entorno de Desarrollo en Windows",
+      "fecha": "2024-10-09",
+      "categoria": "Sistemas/DevOps"
+    },
+    {
+      "nombre": "Curso de Python: PIP y Entornos Virtuales",
+      "fecha": "2023-10-24",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso de Fundamentos de Python",
+      "fecha": "2023-10-24",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso de Rust básico",
+      "fecha": "2023-10-23",
+      "categoria": "Programación General"
+    },
+    {
+      "nombre": "Curso de Gestión de Criptoactivos",
+      "fecha": "2022-04-12",
+      "categoria": "Criptomonedas/Blockchain"
+    },
+    {
+      "nombre": "Curso de Binance: Exchange de Criptomonedas",
+      "fecha": "2022-04-12",
+      "categoria": "Criptomonedas/Blockchain"
+    },
+    {
+      "nombre": "Curso de Bitcoin y Blockchain",
+      "fecha": "2022-04-12",
+      "categoria": "Criptomonedas/Blockchain"
+    },
+    {
+      "nombre": "Audiocurso de Historia de Bitcoin y Criptomonedas",
+      "fecha": "2022-04-12",
+      "categoria": "Criptomonedas/Blockchain"
+    },
+    {
+      "nombre": "Curso de Economía Digital: Bitcoin y Criptomonedas",
+      "fecha": "2022-04-11",
+      "categoria": "Criptomonedas/Blockchain"
+    },
+    {
+      "nombre": "Curso de Configuración de Entorno de Desarrollo en Linux",
+      "fecha": "2021-10-13",
+      "categoria": "Sistemas/DevOps"
+    },
+    {
+      "nombre": "Curso de Entorno de Trabajo para Ciencia de Datos con Jupyter Notebooks y Anaconda",
+      "fecha": "2021-10-09",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso de Análisis de Negocios para Ciencia de Datos",
+      "fecha": "2021-10-06",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso de Estructuras de Datos Lineales con Python",
+      "fecha": "2021-08-28",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso Profesional de Python",
+      "fecha": "2021-08-25",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso de Flask",
+      "fecha": "2021-08-20",
+      "categoria": "Desarrollo Web"
+    },
+    {
+      "nombre": "Curso de Introducción a la Terminal y Línea de Comandos",
+      "fecha": "2021-08-09",
+      "categoria": "Sistemas/DevOps"
+    },
+    {
+      "nombre": "Curso de Python Intermedio: Comprehensions, Lambdas y Manejo de Errores",
+      "fecha": "2021-04-08",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso de Introducción a Selenium con Python",
+      "fecha": "2021-04-02",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso de Fundamentos de Bases de Datos 2019",
+      "fecha": "2020-12-27",
+      "categoria": "Bases de Datos"
+    },
+    {
+      "nombre": "Curso de Programación Orientada a Objetos: POO",
+      "fecha": "2020-12-19",
+      "categoria": "Programación General"
+    },
+    {
+      "nombre": "Curso Profesional de Git y GitHub",
+      "fecha": "2020-12-17",
+      "categoria": "Sistemas/DevOps"
+    },
+    {
+      "nombre": "Curso Básico de JavaScript",
+      "fecha": "2020-11-26",
+      "categoria": "Desarrollo Web"
+    },
+    {
+      "nombre": "Curso de Prework: Configuración de Entorno de Desarrollo en Windows",
+      "fecha": "2020-11-26",
+      "categoria": "Sistemas/DevOps"
+    },
+    {
+      "nombre": "Curso de Introducción a la Terminal y Línea de Comandos 2019",
+      "fecha": "2020-11-26",
+      "categoria": "Sistemas/DevOps"
+    },
+    {
+      "nombre": "Curso de Introducción a C",
+      "fecha": "2020-11-25",
+      "categoria": "Programación General"
+    },
+    {
+      "nombre": "Curso de Introducción al Álgebra Lineal: Vectores",
+      "fecha": "2020-11-25",
+      "categoria": "Matemáticas"
+    },
+    {
+      "nombre": "Curso de Manejo de Crédito Personal y Deuda",
+      "fecha": "2020-11-24",
+      "categoria": "Finanzas"
+    },
+    {
+      "nombre": "Curso Avanzado de Django v2",
+      "fecha": "2020-11-24",
+      "categoria": "Desarrollo Web"
+    },
+    {
+      "nombre": "Curso de Tecnología para Gerentes y Directores",
+      "fecha": "2020-11-15",
+      "categoria": "Marketing/Negocios"
+    },
+    {
+      "nombre": "Curso de Estadística Computacional con Python",
+      "fecha": "2020-07-19",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso de Complejidad Algorítmica con Python",
+      "fecha": "2020-07-12",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso Básico de Python",
+      "fecha": "2020-07-12",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso de Introducción al Pensamiento Computacional con Python",
+      "fecha": "2020-07-08",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso Básico de Django v2",
+      "fecha": "2020-01-21",
+      "categoria": "Desarrollo Web"
+    },
+    {
+      "nombre": "Curso Práctico de Python: Creación de un CRUD",
+      "fecha": "2019-12-11",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso de Introducción al Trading con Criptomonedas",
+      "fecha": "2019-12-08",
+      "categoria": "Criptomonedas/Blockchain"
+    },
+    {
+      "nombre": "Curso de Introducción a C 2019",
+      "fecha": "2019-12-07",
+      "categoria": "Programación General"
+    },
+    {
+      "nombre": "Curso de Fundamentos de Electricidad y Electrónica",
+      "fecha": "2019-12-05",
+      "categoria": "Hardware/IoT"
+    },
+    {
+      "nombre": "Curso Básico de Circuitos Electrónicos",
+      "fecha": "2019-12-05",
+      "categoria": "Hardware/IoT"
+    },
+    {
+      "nombre": "Curso de Machine Learning Aplicado con Python",
+      "fecha": "2019-08-10",
+      "categoria": "Machine Learning"
+    },
+    {
+      "nombre": "Curso de Ingeniería de Datos con Python",
+      "fecha": "2019-08-01",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso de Introducción a Machine Learning 2018",
+      "fecha": "2019-01-28",
+      "categoria": "Machine Learning"
+    },
+    {
+      "nombre": "Curso de Express.js 2018",
+      "fecha": "2019-01-17",
+      "categoria": "Desarrollo Web"
+    },
+    {
+      "nombre": "Curso de Finanzas Personales 2017",
+      "fecha": "2019-01-16",
+      "categoria": "Finanzas"
+    },
+    {
+      "nombre": "Curso Práctico de AWS Cloud",
+      "fecha": "2019-01-10",
+      "categoria": "Cloud Computing"
+    },
+    {
+      "nombre": "Curso de Introducción a los Negocios Online en Ecommerce",
+      "fecha": "2019-01-09",
+      "categoria": "Marketing/Negocios"
+    },
+    {
+      "nombre": "Curso de Programación Estructurada",
+      "fecha": "2019-01-07",
+      "categoria": "Programación General"
+    },
+    {
+      "nombre": "Curso de Fundamentos de Matemáticas",
+      "fecha": "2019-01-07",
+      "categoria": "Matemáticas"
+    },
+    {
+      "nombre": "Curso de Álgebra Lineal 2018",
+      "fecha": "2019-01-07",
+      "categoria": "Matemáticas"
+    },
+    {
+      "nombre": "Fundamentos de Bases de Datos 2017",
+      "fecha": "2019-01-07",
+      "categoria": "Bases de Datos"
+    },
+    {
+      "nombre": "Curso de Python 2019",
+      "fecha": "2019-01-07",
+      "categoria": "Python/Data Science"
+    },
+    {
+      "nombre": "Curso de Álgebra",
+      "fecha": "2019-01-07",
+      "categoria": "Matemáticas"
+    },
+    {
+      "nombre": "Curso de Construcción de Marca 2016",
+      "fecha": "2019-01-06",
+      "categoria": "Marketing/Negocios"
+    },
+    {
+      "nombre": "Curso de Memes",
+      "fecha": "2018-12-28",
+      "categoria": "Marketing/Negocios"
+    },
+    {
+      "nombre": "Curso de jQuery a JavaScript 2018",
+      "fecha": "2018-10-03",
+      "categoria": "Desarrollo Web"
+    },
+    {
+      "nombre": "Curso de Node.js para IoT: Pub/Sub con MQTT, Testing y WebSockets",
+      "fecha": "2018-08-13",
+      "categoria": "Hardware/IoT"
+    },
+    {
+      "nombre": "Curso Básico de Vue.js 2016",
+      "fecha": "2018-08-12",
+      "categoria": "Desarrollo Web"
+    },
+    {
+      "nombre": "Curso Fundamentos de Desarrollo de Hardware con Arduino",
+      "fecha": "2018-07-15",
+      "categoria": "Hardware/IoT"
+    },
+    {
+      "nombre": "Curso de Responsive Design 2016",
+      "fecha": "2018-07-12",
+      "categoria": "Desarrollo Web"
+    },
+    {
+      "nombre": "Fundamentos de JavaScript 2017",
+      "fecha": "2018-07-11",
+      "categoria": "Desarrollo Web"
+    },
+    {
+      "nombre": "Curso profesional de Git y GitHub 2017",
+      "fecha": "2018-07-06",
+      "categoria": "Sistemas/DevOps"
+    },
+    {
+      "nombre": "Curso de Desarrollo Web Online 2016",
+      "fecha": "2018-07-01",
+      "categoria": "Desarrollo Web"
+    },
+    {
+      "nombre": "Curso Gratis de Marca Personal 2018",
+      "fecha": "2018-06-23",
+      "categoria": "Marketing/Negocios"
+    },
+    {
+      "nombre": "Curso de Algoritmos con C 2017",
+      "fecha": "2018-06-19",
+      "categoria": "Programación General"
+    },
+    {
+      "nombre": "Fundamentos de Ingeniería de Software",
+      "fecha": "2018-06-19",
+      "categoria": "Programación General"
+    },
+    {
+      "nombre": "Curso Básico de Programación",
+      "fecha": "2018-06-18",
+      "categoria": "Programación General"
+    }
+  ],
+  "resumen": {
+    "total_cursos": 62,
+    "categorias": {
+      "Python/Data Science": 15,
+      "Desarrollo Web": 11,
+      "Sistemas/DevOps": 8,
+      "Programación General": 8,
+      "Criptomonedas/Blockchain": 6,
+      "Marketing/Negocios": 5,
+      "Hardware/IoT": 4,
+      "Matemáticas": 4,
+      "Bases de Datos": 2,
+      "Machine Learning": 2,
+      "Finanzas": 2,
+      "Cloud Computing": 1
+    },
+    "años_activo": ["2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+    "periodo": "2018-2024"
+  }
+}

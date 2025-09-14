@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, lazy, Suspense, useEffect } from "react"
 import { DashboardMetrics } from "./dashboard-metrics"
-import { DashboardCharts } from "./dashboard-charts"
-import { CourseTable } from "./course-table"
-import { CourseListMobile } from "./course-list-mobile"
-import coursesData from "@/data/platzi-courses.json"
+
+const DashboardCharts = lazy(() => import("./dashboard-charts").then(module => ({ default: module.DashboardCharts })))
+const CourseTable = lazy(() => import("./course-table").then(module => ({ default: module.CourseTable })))
+const CourseListMobile = lazy(() => import("./course-list-mobile").then(module => ({ default: module.CourseListMobile })))
 
 interface Course {
   nombre: string
@@ -32,9 +32,20 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 export function PlatziDashboard() {
   const [dateFilter, setDateFilter] = useState<DateFilter>("year")
+  const [courses, setCourses] = useState<Course[]>([])
+  const [isLoading, setIsLoading] = useState(true)
 
-  const courses: Course[] = coursesData.cursos
   const totalCourses = courses.length
+
+  useEffect(() => {
+    // Dynamic import of data
+    import("@/data/platzi-courses.json")
+      .then(module => {
+        setCourses(module.default.cursos)
+        setIsLoading(false)
+      })
+      .catch(console.error)
+  }, [])
 
   const metrics = useMemo(() => {
     const categoriesSet = new Set(courses.map((course) => course.categoria))
@@ -85,6 +96,30 @@ export function PlatziDashboard() {
       .sort((a, b) => b.value - a.value)
   }, [courses])
 
+  if (isLoading) {
+    return (
+      <div className="container mx-auto p-6 space-y-8 bg-background">
+        <div className="text-center space-y-2 border-b border-border pb-8">
+          <h1 className="text-4xl font-bold text-foreground">Trayectoria de Aprendizaje en Platzi</h1>
+          <p className="text-lg text-muted-foreground">por Ricardo Romo</p>
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+            Análisis completo del progreso académico desde 2018 hasta 2024
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {Array.from({length: 4}).map((_, i) => (
+            <div key={i} className="h-24 bg-muted/50 animate-pulse rounded-lg" />
+          ))}
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="h-[500px] bg-muted/50 animate-pulse rounded-lg" />
+          <div className="h-[500px] bg-muted/50 animate-pulse rounded-lg" />
+        </div>
+        <div className="h-96 bg-muted/50 animate-pulse rounded-lg" />
+      </div>
+    )
+  }
+
   return (
     <div className="container mx-auto p-6 space-y-8 bg-background">
       <div className="text-center space-y-2 border-b border-border pb-8">
@@ -101,22 +136,33 @@ export function PlatziDashboard() {
         activeYears={metrics.activeYears}
       />
 
-      <DashboardCharts
-        dateChartData={dateChartData}
-        categoryChartData={categoryChartData}
-        dateFilter={dateFilter}
-        onDateFilterChange={setDateFilter}
-        totalCourses={totalCourses}
-      />
+      <Suspense fallback={
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="h-[500px] bg-muted/50 animate-pulse rounded-lg" />
+          <div className="h-[500px] bg-muted/50 animate-pulse rounded-lg" />
+        </div>
+      }>
+        <DashboardCharts
+          dateChartData={dateChartData}
+          categoryChartData={categoryChartData}
+          dateFilter={dateFilter}
+          onDateFilterChange={setDateFilter}
+          totalCourses={totalCourses}
+        />
+      </Suspense>
 
       {/* Desktop Table */}
       <div className="hidden lg:block">
-        <CourseTable courses={courses} categoryColors={CATEGORY_COLORS} />
+        <Suspense fallback={<div className="h-96 bg-muted/50 animate-pulse rounded-lg" />}>
+          <CourseTable courses={courses} categoryColors={CATEGORY_COLORS} />
+        </Suspense>
       </div>
 
       {/* Mobile Card List */}
       <div className="lg:hidden">
-        <CourseListMobile courses={courses} categoryColors={CATEGORY_COLORS} />
+        <Suspense fallback={<div className="space-y-4">{Array.from({length: 6}).map((_, i) => <div key={i} className="h-24 bg-muted/50 animate-pulse rounded-lg" />)}</div>}>
+          <CourseListMobile courses={courses} categoryColors={CATEGORY_COLORS} />
+        </Suspense>
       </div>
     </div>
   )

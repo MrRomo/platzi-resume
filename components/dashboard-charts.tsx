@@ -66,7 +66,7 @@ export function DashboardCharts({
           </div>
         </CardHeader>
         <CardContent>
-          <ResponsiveContainer width="100%" height={300}>
+          <ResponsiveContainer width="100%" height={500}>
             <BarChart data={dateChartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
               <XAxis
@@ -96,16 +96,32 @@ export function DashboardCharts({
           <CardDescription>Distribución de cursos por área de conocimiento</CardDescription>
         </CardHeader>
         <CardContent>
-          <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie data={categoryChartData} cx="50%" cy="50%" outerRadius={100} fill="#8884d8" dataKey="value">
-                {categoryChartData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
-                ))}
-              </Pie>
-              <Tooltip content={<CustomTooltip />} />
-            </PieChart>
-          </ResponsiveContainer>
+          <div className="flex flex-col items-center gap-2">
+            <ResponsiveContainer width="100%" height={300}>
+              <PieChart>
+                <Pie data={categoryChartData} cx="50%" cy="50%" outerRadius={120} fill="#8884d8" dataKey="value">
+                  {categoryChartData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Pie>
+                <Tooltip content={<CustomTooltip />} />
+              </PieChart>
+            </ResponsiveContainer>
+
+            <div className="flex flex-row flex-wrap justify-center">
+              {categoryChartData.map((entry) => (
+                <div key={entry.name} className="flex items-center gap-1 mx-2 py-1">
+                  <div
+                    className="w-3 h-3 rounded-sm"
+                    style={{ backgroundColor: entry.color }}
+                  />
+                  <div className="flex-1">
+                    <div className="text-sm font-medium text-foreground">{entry.name} ({entry.value}) </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </CardContent>
       </Card>
     </div>

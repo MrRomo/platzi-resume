@@ -16,7 +16,7 @@ export function DashboardMetrics({ totalCourses, totalCategories, activeYears }:
           <BookOpen className="h-4 w-4 text-primary" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold text-foreground">{totalCourses}</div>
+          <div className="text-4xl font-bold text-foreground">{totalCourses}</div>
           <p className="text-xs text-muted-foreground">Completados exitosamente</p>
         </CardContent>
       </Card>
@@ -27,7 +27,7 @@ export function DashboardMetrics({ totalCourses, totalCategories, activeYears }:
           <Award className="h-4 w-4 text-primary" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold text-foreground">{totalCategories}</div>
+          <div className="text-4xl font-bold text-foreground">{totalCategories}</div>
           <p className="text-xs text-muted-foreground">Áreas de conocimiento</p>
         </CardContent>
       </Card>
@@ -38,7 +38,7 @@ export function DashboardMetrics({ totalCourses, totalCategories, activeYears }:
           <Calendar className="h-4 w-4 text-primary" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold text-foreground">{activeYears}</div>
+          <div className="text-4xl font-bold text-foreground">{activeYears}</div>
           <p className="text-xs text-muted-foreground">De aprendizaje continuo</p>
         </CardContent>
       </Card>
@@ -48,7 +48,7 @@ export function DashboardMetrics({ totalCourses, totalCategories, activeYears }:
           <CardTitle className="text-foreground">Período</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold text-foreground">2018-2024</div>
+          <div className="text-4xl font-bold text-foreground">2018-2024</div>
           <p className="text-xs text-muted-foreground">Rango temporal</p>
         </CardContent>
       </Card>

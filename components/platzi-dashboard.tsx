@@ -4,6 +4,7 @@ import { useState, useMemo } from "react"
 import { DashboardMetrics } from "./dashboard-metrics"
 import { DashboardCharts } from "./dashboard-charts"
 import { CourseTable } from "./course-table"
+import { CourseListMobile } from "./course-list-mobile"
 import coursesData from "@/data/platzi-courses.json"
 
 interface Course {
@@ -108,7 +109,15 @@ export function PlatziDashboard() {
         totalCourses={totalCourses}
       />
 
-      <CourseTable courses={courses} categoryColors={CATEGORY_COLORS} />
+      {/* Desktop Table */}
+      <div className="hidden lg:block">
+        <CourseTable courses={courses} categoryColors={CATEGORY_COLORS} />
+      </div>
+
+      {/* Mobile Card List */}
+      <div className="lg:hidden">
+        <CourseListMobile courses={courses} categoryColors={CATEGORY_COLORS} />
+      </div>
     </div>
   )
 }
